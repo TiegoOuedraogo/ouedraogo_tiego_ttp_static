@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <title>
-        
-    </title>
-    <body>
-        <script>
-            var date = new Date();
-            var hour = time.getHours();
-            document.getElementById("time").innerHTML = hour
-        </script>
-        <h1>My name is Tiego Ouedraogo and
-            my favorite hobby is CODING 
-        </h1>
-        <p>The current time is: <span id="time"> </span></p>
-    </body>
+  <title> </title>
+  <body>
+    <h1><strong>My name is Tiego Ouedraogo and my favorite hobby is CODING.
+    The current time is: <span id="time"></span></strong> </h1>
+    <script>
+      let x = setInterval(function () {
+        const time = new Date();
+        let hour = time.getHours();
+        let minute = time.getMinutes();
+        let second = time.getSeconds();
+        if (hour == 0) {
+          hour = 12;
+        } else if (hour > 12) {
+          hour = hour - 12;
+        }
+      document.getElementById("time").innerHTML =
+        hour + ":" + minute + ":" + second;
+      }, 1000);
 
+    </script>
+  </body>
 </html>
